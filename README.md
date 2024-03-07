@@ -104,3 +104,56 @@ Referencing Table
 1. Insert - May Cause Violation
 2. Delete - Will Not Cause Any Violation
 3. Update - May Cause Violation
+
+# Lec - 12 : Super Key
+A super key is a combination of all Possible attributes which can uniquely identify two tuples in a table.
+Super set of any candidate key is Super Key.
+Ex : (roll_no, age, name)
+Q: IF R(A1,A2,A3,...An) then how many super keys are possible.
+if A1 is a Candidate Key & A3,A2 are candidate key.
+Soln : Take a Power Set of R
+Total no of Possibility = 2^n
+1. A1 is candidate key then super key is 2^n-1.Boz left the A1 then remaining element is n-1. Then choice is 2^n-1.
+2. A3,A2 is candidate key then super key is 2^n-1+2^n-1-2^n-2
+
+# Lec - 13 : Entity Relationship Model(ER Model)
+Entity : Any Object that have Physical Existence.
+Ex : Student(RollNo, age, address) => Entity Type OR Schema
+Relationship : Make a association or Relationship between Two Entity.
+Ex: Student--->Study(Relationship)<---Course
+Representation : 
+1. Entity => Squre
+2. Attribute-Type => Eclispe
+3. Relationship => Diamond
+
+# Lec - 14 : Types of Attributes
+1. Single Vs MultiValued
+Single : Only one valued of Attributes
+Represent : Single Eclispe
+Ex : Reg.No
+MultiValued : Multiple OR More than one Valued Attributes
+Representation : Double Eclispe
+Ex : Address => Permanant OR Correspondese
+
+2. Simple Vs Composite
+Simple : It cannot further divide
+Representation : 
+Ex : Age
+Composite : It Can Futher Divide into two Valued Attributes
+Representation : 
+Ex : Name => first_name + last_name
+
+3. Stored Vs Derived
+Stored : Cannot derived
+Ex : DOB
+Derived : It Can derived attribute
+Representation : Dotted Eclispe
+Ex : age => DOB + Today
+
+4. Key Vs Non-Key Attributes
+Key : Which is used to uniquely identify the attributes
+Representationm : Underline
+Ex: Reg.No
+Non-key : Cannot identify Unique
+
+
