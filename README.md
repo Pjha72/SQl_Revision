@@ -61,3 +61,46 @@ Maintence is High
 Schema : It is a Logical Representation of Database.
 It is define in the Data Definition Language.
 
+# Lec - 06 : Three Level Schema
+Main motive for this schema is `Data Independence`.
+There are Three Level : External Schema(View Level) => Conceptual Schema(Logical Level) => Physical Schema(Physical Level) => Database(Disk)
+Provide the Abstraction.
+
+# Lec - 07 : Data Independence OR Data Abstraction
+Hide the Logic or Data From the Users.
+There are Two Types of Data Independence.
+1. Logical Data Independence : View Level to Conceptual Level
+2. Physical Data Independence : Conceptual Level to Physical Level
+
+# Lec - 08 : Integrity Constraints in Database
+Integrity Constraints are rules defined in a database to maintain accuracy, consistency, and reliability.
+Types of Integrity Constrauints
+1. Domain Constraints: Attributes(int age, Char name ...)
+2. Entity Integrity Constraints: Related To Primary Key(Not NULL)
+3. Referential integrity Constraints: Foreign Key
+4. Key Constraints: Unique Attribute
+
+# Lec - 09 : Candidate Key
+Key : It is a Normal Attributes
+Use of Key : To Uniquely Identify any Two tuples in Table
+It is a set of or collection of unique attributes in table.
+
+# Lec - 10 : Primary Key(Unique + NOT NULL)
+It is a Unique and Not NULL.
+
+# Lec - 11 : Foreign Key
+It is an attribute or set of attributes that references to Primary Key of same table or another table(relation).
+It maintains the Referential Integrity
+Base Table(Referenced Table) + Referncing Table
+Syntax : create table Course(c_id varchar(10), c_name varchar(20), roll_no int reference Student(roll_no));
+In one table more than one foregin key is persent but Primary Key is only one.
+
+Refernced Table
+1. Insert - No Violation
+2. Delete - May Cause Violation(On Delete Cascade, On Delete Set NULL)
+3. Update - May Cause Violation(On Update Cascade)
+
+Referencing Table
+1. Insert - May Cause Violation
+2. Delete - Will Not Cause Any Violation
+3. Update - May Cause Violation
