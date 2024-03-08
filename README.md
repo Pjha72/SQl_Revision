@@ -156,4 +156,27 @@ Representationm : Underline
 Ex: Reg.No
 Non-key : Cannot identify Unique
 
+# Lec - 15 : Degree of Relationship(Cardinality)
+Make a Association between two entity i.e relationship.
+1. One-to-One : Where the two entity is connected in One-to-One Association.
+Ex : Employee --> Works <--- Department
+Primary key in Works table is `Either E_id OR D_id`. There are Final two table in One-To-One Rwlationship.
+2. One-to-Many : Here One customer can give many order i.e the example.
+Ex: Customer ---> Gives <--- Order
+The name of relationship attribute is `Descriptive Attribute`.
+Primary key : Only one primary key(`Order_No`) in Relationship table.
+Many vale side ke table ke primary key hii Relationship table ka primary key hota hai.
+Reduce no of tables in `One-to-Many` i.e 3 convert to 2 in many side.
+3. Many-to-One : Here Many customer can give one order i.e the example.
+Ex: Customer ---> Gives <--- Order
+The name of relationship attribute is `Descriptive Attribute`.
+Primary key : Only one primary key(`Cust_Id`) in Relationship table.
+Many vale side ke table ke primary key hii Relationship table ka primary key hota hai.
+Reduce no of tables in `Many-to-One` i.e 3 convert to 2 in many side.
+4. Many-to-Many : Here Many Student Study Many Course i.e the example.
+Ex: Student ---> Study <--- Course
+Primary key in Refrencing Or Relationship table is `Roll_No & C_id` (Composite key).
+Reduce no of table is not possible.
+
+
 
