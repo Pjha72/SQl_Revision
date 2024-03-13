@@ -266,3 +266,42 @@ Rule :
 2. Imp Rule : For Each FD = `L.H.S Of Each FD Should be CK OR SK.`
 
 BCNF : 3NF : 2NF : 1NF
+
+# Lec - 27 : BCNF Always Ensures Dependency Preserving Decompostion
+
+1. Third Normal Form alwayus ensures `Dependency Preserving decomposition` but not in `BCNF`.
+2. Both Third & BCNF ensures lossless decomposition.
+
+# Lec - 28 : Lossless and Lossy Decomposition
+
+When decompose the table in DBMS then that decompostion is must be lossless.
+
+JOIN : CROSS PRODUCT + SOME CONDITION
+Common Attributes should be Candidate Key OR Super Key of Either R1 or R2 or Both.
+
+Lossless Decomposition Rule : 
+1. R1 U R2 = R
+2. R1 Intersection R2 Not Equal to Phi
+3. R1 (CK) or R2(CK) or Both
+
+# Lec - 29 : All Normal Form
+1. 1NF
+a. No Multi-Valued attribute
+b. Only Single valued
+
+2. 2NF
+a. In 1st NF + No Partial Depedency
+b. Only Full Dependency
+
+3. 3NF
+a. In 2nd NF + No Transitive Dependency
+b. No Non-Prime Should determine non-prime
+
+4. BCNF
+a. In 3rd NF + L.H.S should be Ck or Sk
+
+5. 4NF
+a. In BCNF + No Multivalued Dependency
+
+6. 5NF
+a. In 4th NF + Lossless Decomposition
