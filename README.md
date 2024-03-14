@@ -305,3 +305,41 @@ a. In BCNF + No Multivalued Dependency
 
 6. 5NF
 a. In 4th NF + Lossless Decomposition
+
+# Lec - 30 : Depenedency Preserving Decomposition
+Dependency Preserving Decomposition is defined as When find the Union of two relation after that Union give the original Relation.
+R(ABCD) : Divide into Two parts R1 & R2
+R1 U R2 = R
+
+# Lec - 31 : Joins
+Scenario : Where to help to solve the Question by using Two or more table.
+
+Joins : Cross Product  + Some Condition(Select Statement)
+Types of Joins : 
+1. Cross Join
+2. Natural Join
+3. Conditional Join
+4. Equi Join
+5. Self Join
+6. Outer Join
+   6.1 Left Join
+   6.2 Right Join
+   6.3 Full Join
+
+# Lec - 32 : Natural Join
+When Equal the Common Attribute Value in table at this moment you can use `Natural Join`.
+Q : Find the Emp Nmaes who is working in a department?
+Soln : Select E_name from emp, dept where emp.e_no = dept.e_no; 
+    `OR`
+Select E_name from emp Natural Join dept;
+
+# Lec - 33 : Self Join
+In Which the Table is Join with it self.
+Q : Find student id who is enrolled in at least two courses?
+Soln : Select T1.s_id from study as T1, study as T2 where
+T1.s_id = T2.s_id and T1.c_id <> T2.c_id;
+
+# Lec - 34 : Equi Join `=`
+Q : Find the Emp name who worked in a department having location same as their address?
+Soln : Select E_name from emp, dept where emp.e_no = dept.e_no and emp.address = dept.location.
+
