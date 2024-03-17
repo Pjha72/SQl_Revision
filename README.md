@@ -339,7 +339,66 @@ Q : Find student id who is enrolled in at least two courses?
 Soln : Select T1.s_id from study as T1, study as T2 where
 T1.s_id = T2.s_id and T1.c_id <> T2.c_id;
 
-# Lec - 34 : Equi Join `=`
+# Lec - 34 : Equi Join (`=`)
 Q : Find the Emp name who worked in a department having location same as their address?
 Soln : Select E_name from emp, dept where emp.e_no = dept.e_no and emp.address = dept.location.
+
+# Lec - 35 : Left Outer Join
+It gives the matching rows and the rows which are in left table but not in right table.
+
+Query : Select emp_no, e_name,d_name, Loc from emp left outer join dept On (emp.dept_no=dept.dept_no);
+
+# Lec - 36 : Right Outer Join
+It gives the matching rows and the rows which are in Right table but not in Left table.
+
+Query : Select emp_no, e_name,d_name, Loc from emp Right outer join dept On (emp.dept_no=dept.dept_no);
+
+Full Outer Join : It is a Union of Left Outer Join and Right Outer Join.
+
+# Lec - 37 : SQL(Structure Query Language)
+SQL is domain-specific language.
+SQL is declarative language. i.e What to do but in Procedural Language means what to do and How to do.
+Types Of SQL Commands : DDL, DML, DCL, TCL
+
+# Lec - 38 : All Types of SQL Commands
+1. DDl : Data Definition Language
+DDL Deals with the Schema.
+There are Five Commands in DDL
+1. Create : Create a database, table
+2. Alter : Update , Add,Delete in the Structure
+3. Drop : Remove the Structure
+4. Truncate : Remove the data from table
+5. Rename : Change the name of Structure
+
+2. DML : Data Manipulation Language
+Deals with Anything changes in the Database that time Use DML
+There are Four Commands in DML
+1. Select : Fetch the Data
+2. Insert : Anything add into the database
+3. Update : Anything changes in the table
+4. Delete : Anything Delete from the table
+
+3. DCL : Data Control Language
+Deals The Authorization of the table
+There are Two types of Commands
+1. Grant : What type of Privilages that give to the user
+2. Revoke : Take back the Privilages from the user
+
+4. TCL : Transaction Control Language
+Deals with Transaction Details
+There are Three Types of Commands
+1. Commit : All the Transaction are Commited Then fetch the data
+2. Rollback : If Transaction if Failed Then revert back to the inital Position
+3. SavePoint : Save the Transaction in between the processing
+
+5. Constraints
+There are Six Types of Constraints
+1. Primary Key : Unique + Not NULL
+2. Foreign Key : References from same table or Another table.
+3. Check : It defines the Mandatory fields in the table
+4. Unique : No duplicate Value
+5. Default : It persent By default value
+6. Not NULL : Don't left the rows without the value
+
+
 
